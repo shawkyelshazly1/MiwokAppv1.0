@@ -18,10 +18,11 @@ import java.util.ArrayList;
  * Created by Veronica on 12/3/2017.
  */
 public class WordAdapter extends ArrayAdapter<Word> {
+    public int mColor;
 
-
-    public WordAdapter(@NonNull Context context, ArrayList<Word> listArray) {
+    public WordAdapter(@NonNull Context context, ArrayList<Word> listArray , int colorId) {
         super(context,0,listArray);
+        mColor = colorId;
     }
 
     @NonNull
@@ -39,6 +40,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView view2 = listView.findViewById(R.id.itemBottom);
         ImageView image1 = listView.findViewById(R.id.photo_item);
         LinearLayout itemBox = listView.findViewById(R.id.itemBox);
+        itemBox.setBackgroundColor(mColor);
 
         view1.setText(word.getMiwokTransilation());
         view2.setText(word.getDefaultTransilation());
@@ -49,7 +51,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
             image1.setVisibility(View.GONE);
         }
 
-        itemBox.setBackgroundColor(word.getColor());
+
         return listView;
 
 }

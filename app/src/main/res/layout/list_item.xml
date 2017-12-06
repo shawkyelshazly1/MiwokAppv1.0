@@ -17,10 +17,11 @@
         />
     <LinearLayout
         android:id="@+id/itemBox"
+        android:background="@color/category_phrases"
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:orientation="vertical"
-        android:background="@color/category_numbers"
+
         >
         <TextView
             android:id="@+id/itemTop"
