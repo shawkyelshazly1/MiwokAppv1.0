@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -37,10 +38,18 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView view1 = listView.findViewById(R.id.itemTop);
         TextView view2 = listView.findViewById(R.id.itemBottom);
         ImageView image1 = listView.findViewById(R.id.photo_item);
+        LinearLayout itemBox = listView.findViewById(R.id.itemBox);
 
         view1.setText(word.getMiwokTransilation());
         view2.setText(word.getDefaultTransilation());
-        image1.setImageResource(word.getImageId());
+        if (word.hasImage()){
+            image1.setVisibility(View.VISIBLE);
+            image1.setImageResource(word.getImageId());
+        }else {
+            image1.setVisibility(View.GONE);
+        }
+
+        itemBox.setBackgroundColor(word.getColor());
         return listView;
 
 }

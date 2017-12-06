@@ -8,7 +8,8 @@ public class Word {
 
     private String mDefaultTransilation;
     private String mMiwokTransilation;
-    private int mImageId;
+    private int mImageId = NO_IMAGE;
+    private static final int NO_IMAGE = -1;
 
 
     public Word(String defaultTransilation,String miwokTransilation ,int imageId){
@@ -34,5 +35,11 @@ public class Word {
 
     public int getImageId(){
         return mImageId;
+    }
+
+
+
+    public boolean hasImage(){
+        return mImageId != NO_IMAGE;
     }
 }

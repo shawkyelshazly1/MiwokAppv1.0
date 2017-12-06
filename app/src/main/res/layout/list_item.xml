@@ -1,42 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
+    android:minHeight="88dp"
+    android:padding="16dp"
+    android:background="@color/tan_background"
         >
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
         tools:src="@mipmap/ic_launcher"
         android:id="@+id/photo_item"
         />
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginBottom="12dp"
+        android:id="@+id/itemBox"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
         android:orientation="vertical"
+        android:background="@color/category_numbers"
         >
         <TextView
             android:id="@+id/itemTop"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="name"
             tools:textColor="#FF0"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
             android:textStyle="bold"
-            android:textColor="#080808"
+            android:textColor="#FFF"
             />
         <TextView
 
             android:id="@+id/itemBottom"
-            android:layout_width="wrap_content"
+            tools:textColor="#FF0"
+            android:textColor="#FFF"
+            android:paddingLeft="16dp"
+            android:paddingBottom="12dp"
+            tools:text="word"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
             />
     </LinearLayout>
 
