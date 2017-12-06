@@ -18,7 +18,7 @@ public class PhrasesActivity extends AppCompatActivity {
          * Sorting English Numbers6
          */
 
-  
+
         ArrayList<Word> words = new ArrayList<>();
 
         words.add(new Word("Where are you going?","minto wuksus"));
