@@ -29,7 +29,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        Word word = getItem(position);
+        final Word word = getItem(position);
 
         View listView = convertView;
         if(listView == null){
@@ -40,7 +40,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView view2 = listView.findViewById(R.id.itemBottom);
         ImageView image1 = listView.findViewById(R.id.photo_item);
         LinearLayout itemBox = listView.findViewById(R.id.itemBox);
-        itemBox.setBackgroundColor(mColor);
+        itemBox.setBackgroundResource(mColor);
 
         view1.setText(word.getMiwokTransilation());
         view2.setText(word.getDefaultTransilation());

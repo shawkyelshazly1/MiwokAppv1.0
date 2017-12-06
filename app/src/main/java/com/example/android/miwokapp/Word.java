@@ -8,6 +8,7 @@ public class Word {
 
     private String mDefaultTransilation;
     private String mMiwokTransilation;
+    private int mAudioId;
     private int mImageId = NO_IMAGE;
     private static final int NO_IMAGE = -1;
 
@@ -37,7 +38,9 @@ public class Word {
         return mImageId;
     }
 
-
+    public int getAudioId(){
+        return mAudioId;
+    }
 
     public boolean hasImage(){
         return mImageId != NO_IMAGE;
