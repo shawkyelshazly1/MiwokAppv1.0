@@ -13,16 +13,20 @@ public class Word {
     private static final int NO_IMAGE = -1;
 
 
-    public Word(String defaultTransilation,String miwokTransilation ,int imageId){
+
+    public Word(String defaultTransilation,String miwokTransilation ,int imageId , int audioId){
         mDefaultTransilation = defaultTransilation;
         mMiwokTransilation = miwokTransilation;
         mImageId = imageId;
+        mAudioId = audioId;
 
     }
 
-    public Word(String defaultTransilation,String miwokTransilation){
+    public Word(String defaultTransilation,String miwokTransilation , int audioId){
         mDefaultTransilation = defaultTransilation;
         mMiwokTransilation = miwokTransilation;
+        mAudioId = audioId;
+
 
     }
 
@@ -38,11 +42,12 @@ public class Word {
         return mImageId;
     }
 
-    public int getAudioId(){
-        return mAudioId;
-    }
 
     public boolean hasImage(){
         return mImageId != NO_IMAGE;
+    }
+
+    public int getAudioResourceId() {
+        return mAudioId;
     }
 }

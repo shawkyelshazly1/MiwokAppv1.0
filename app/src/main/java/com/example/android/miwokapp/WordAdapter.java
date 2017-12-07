@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -39,11 +39,13 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView view1 = listView.findViewById(R.id.itemTop);
         TextView view2 = listView.findViewById(R.id.itemBottom);
         ImageView image1 = listView.findViewById(R.id.photo_item);
-        LinearLayout itemBox = listView.findViewById(R.id.itemBox);
+        RelativeLayout itemBox = listView.findViewById(R.id.itemBox);
+        ImageView icon =listView.findViewById(R.id.playIcon);
         itemBox.setBackgroundResource(mColor);
 
         view1.setText(word.getMiwokTransilation());
         view2.setText(word.getDefaultTransilation());
+        icon.setImageResource(R.drawable.ic_play_arrow_black_24dp);
         if (word.hasImage()){
             image1.setVisibility(View.VISIBLE);
             image1.setImageResource(word.getImageId());
