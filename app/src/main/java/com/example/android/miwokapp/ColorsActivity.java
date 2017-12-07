@@ -11,7 +11,7 @@ public class ColorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new NumbersFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new ColorsFragment()).commit();
 
 
     }
